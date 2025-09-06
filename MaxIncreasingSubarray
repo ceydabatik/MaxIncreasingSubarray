@@ -29,21 +29,18 @@ namespace MaxlncreasingSubArray
                 }
                 else
                 {
-                    // Eski diziyi karşılaştır
                     if (currentSum > bestSum)
                     {
                         best = new List<int>(current);
                         bestSum = currentSum;
                     }
 
-                    // Yeni dizi başlat
                     current.Clear();
                     current.Add(numbers[i]);
                     currentSum = numbers[i];
                 }
             }
 
-            // Son alt diziyi de kontrol et
             if (currentSum > bestSum)
             {
                 best = new List<int>(current);
